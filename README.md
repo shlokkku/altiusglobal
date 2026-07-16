@@ -54,6 +54,7 @@ For Vercel or Netlify:
 - Framework: Vite
 - Build command: `npm run build`
 - Publish directory: `dist`
+- Client-side routes such as `/about` and `/products` are supported by `vercel.json` and `public/_redirects`.
 
 For static hosting or cPanel:
 

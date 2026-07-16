@@ -22,7 +22,7 @@ export function Navbar() {
       }`}
     >
       <div className="container mx-auto px-6 md:px-12 flex justify-between items-center">
-        <a href="#home" className="transition-transform hover:scale-[1.01]">
+        <a href="/" className="transition-transform hover:scale-[1.01]">
           <BrandLogo light={!scrolled} compact />
         </a>
 
@@ -40,7 +40,7 @@ export function Navbar() {
 
         <div className="hidden lg:block">
           <a
-            href="#contact"
+            href="/#contact"
             className="inline-flex px-6 py-2.5 rounded-full bg-gradient-to-r from-[#B8860B] to-[#D4AF37] text-white font-sans text-sm font-medium hover:shadow-[0_0_15px_rgba(212,175,55,0.4)] transition-all hover:scale-105"
           >
             Get Quote
@@ -77,7 +77,7 @@ export function Navbar() {
                 </a>
               ))}
               <a
-                href="#contact"
+                href="/#contact"
                 onClick={() => setMobileMenuOpen(false)}
                 className="mt-4 w-full px-6 py-3 rounded-xl bg-gradient-to-r from-[#B8860B] to-[#D4AF37] text-white font-sans font-medium text-center"
               >

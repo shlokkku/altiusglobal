@@ -62,10 +62,10 @@ export function Hero() {
           transition={{ duration: 1, delay: 0.6 }}
           className="flex flex-col sm:flex-row gap-4"
         >
-          <Button href="#contact" icon className="shadow-[0_0_20px_rgba(184,134,11,0.3)] hover:shadow-[0_0_30px_rgba(184,134,11,0.5)]">
+          <Button href="/#contact" icon className="shadow-[0_0_20px_rgba(184,134,11,0.3)] hover:shadow-[0_0_30px_rgba(184,134,11,0.5)]">
             Request Quotation
           </Button>
-          <Button href="#products" primary={false} className="!text-white !border-white/30 hover:!bg-white/10 hover:!border-white/50 backdrop-blur-sm">
+          <Button href="/products" primary={false} className="!text-white !border-white/30 hover:!bg-white/10 hover:!border-white/50 backdrop-blur-sm">
             Explore Products
           </Button>
         </motion.div>

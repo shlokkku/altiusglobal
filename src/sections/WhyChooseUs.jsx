@@ -8,9 +8,9 @@ export function WhyChooseUs() {
       <div className="container mx-auto px-6 md:px-12">
         <SectionHeading subtitle="The Altius Advantage" title="Why Partner With Us" centered />
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mt-16">
+        <div className="flex gap-5 overflow-x-auto snap-x snap-mandatory pb-4 -mx-6 px-6 md:mx-0 md:px-0 md:pb-0 md:grid md:grid-cols-2 lg:grid-cols-4 md:overflow-visible md:snap-none md:gap-8 mt-16">
           {features.map((feature, index) => (
-            <FadeIn key={feature.title} delay={index * 0.08}>
+            <FadeIn key={feature.title} delay={index * 0.08} className="min-w-[82vw] snap-start md:min-w-0">
               <article className="bg-white p-8 rounded-2xl border border-[#4A3728]/10 hover:border-[#D4AF37]/30 transition-all duration-300 hover:-translate-y-1 h-full shadow-sm hover:shadow-md">
                 <div className="w-12 h-12 bg-gradient-to-br from-[#B8860B]/10 to-[#D4AF37]/10 rounded-xl flex items-center justify-center mb-6">
                   <feature.icon className="w-6 h-6 text-[#B8860B]" />

@@ -26,10 +26,10 @@ export function Footer() {
           <div>
             <h4 className="font-serif text-xl text-white mb-6">Company</h4>
             <ul className="space-y-3 font-sans text-sm text-white/60">
-              <li><a href="#about" className="hover:text-[#D4AF37] transition-colors">About Us</a></li>
-              <li><a href="#global-network" className="hover:text-[#D4AF37] transition-colors">Global Network</a></li>
-              <li><a href="#products" className="hover:text-[#D4AF37] transition-colors">Quality Assurance</a></li>
-              <li><a href="#contact" className="hover:text-[#D4AF37] transition-colors">Contact</a></li>
+              <li><a href="/about" className="hover:text-[#D4AF37] transition-colors">About Us</a></li>
+              <li><a href="/#global-network" className="hover:text-[#D4AF37] transition-colors">Global Network</a></li>
+              <li><a href="/products" className="hover:text-[#D4AF37] transition-colors">Quality Assurance</a></li>
+              <li><a href="/#contact" className="hover:text-[#D4AF37] transition-colors">Contact</a></li>
             </ul>
           </div>
 
