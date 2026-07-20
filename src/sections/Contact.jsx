@@ -57,8 +57,8 @@ export function Contact() {
                 <Field label="Country" name="Country" />
               </div>
               <div className="space-y-2">
-                <label className="font-sans text-xs font-semibold text-[#4A3728] uppercase tracking-wider">Product Interest / Message</label>
-                <textarea name="Product Interest / Message" rows="4" className="w-full bg-white border border-[#4A3728]/20 rounded-xl px-4 py-3 focus:outline-none focus:border-[#B8860B] focus:ring-1 focus:ring-[#B8860B] transition-all font-sans text-[#4A3728] resize-none" />
+                <label htmlFor="message" className="font-sans text-xs font-semibold text-[#4A3728] uppercase tracking-wider">Product Interest / Message</label>
+                <textarea id="message" name="Product Interest / Message" rows="4" className="w-full bg-white border border-[#4A3728]/20 rounded-xl px-4 py-3 focus:outline-none focus:border-[#B8860B] focus:ring-1 focus:ring-[#B8860B] transition-all font-sans text-[#4A3728] resize-none" />
               </div>
               <button type="submit" className="bg-gradient-to-r from-[#B8860B] to-[#D4AF37] text-white px-8 py-4 rounded-xl font-sans font-medium tracking-wide transition-all duration-300 shadow-md hover:shadow-xl hover:-translate-y-1 w-full md:w-auto">
                 Submit Enquiry
@@ -72,10 +72,12 @@ export function Contact() {
 }
 
 function Field({ label, name, type = 'text' }) {
+  const id = name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+
   return (
     <div className="space-y-2">
-      <label className="font-sans text-xs font-semibold text-[#4A3728] uppercase tracking-wider">{label}</label>
-      <input name={name} type={type} className="w-full bg-white border border-[#4A3728]/20 rounded-xl px-4 py-3 focus:outline-none focus:border-[#B8860B] focus:ring-1 focus:ring-[#B8860B] transition-all font-sans text-[#4A3728]" />
+      <label htmlFor={id} className="font-sans text-xs font-semibold text-[#4A3728] uppercase tracking-wider">{label}</label>
+      <input id={id} name={name} type={type} className="w-full bg-white border border-[#4A3728]/20 rounded-xl px-4 py-3 focus:outline-none focus:border-[#B8860B] focus:ring-1 focus:ring-[#B8860B] transition-all font-sans text-[#4A3728]" />
     </div>
   );
 }

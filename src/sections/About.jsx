@@ -33,6 +33,10 @@ export function About() {
             <img
               src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=2070&auto=format&fit=crop"
               alt="Dubai Global Headquarters"
+              width="1200"
+              height="900"
+              loading="lazy"
+              decoding="async"
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#2A1F17] via-transparent to-transparent opacity-80" />

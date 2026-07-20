@@ -14,6 +14,10 @@ export function Divisions() {
               <img
                 src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?q=80&w=2070&auto=format&fit=crop"
                 alt="Food Commodities"
+                width="1200"
+                height="690"
+                loading="lazy"
+                decoding="async"
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#2A1F17] via-[#2A1F17]/50 to-transparent" />

@@ -18,8 +18,12 @@ export function Hero() {
           muted
           loop
           playsInline
-          poster="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop"
-        />
+          preload="metadata"
+          aria-hidden="true"
+          tabIndex="-1"
+        >
+          <track kind="captions" src="/assets/empty-captions.vtt" srcLang="en" label="Decorative background video" default />
+        </video>
       </motion.div>
 
       <div className="absolute inset-0 z-[1] bg-gradient-to-b from-[#0A0705]/85 via-[#0A0705]/55 to-[#E8DCC8] pointer-events-none" />

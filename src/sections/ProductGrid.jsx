@@ -24,6 +24,10 @@ export function ProductGrid() {
                   <img
                     src={product.image}
                     alt={product.name}
+                    width="900"
+                    height="700"
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
                   <div className="absolute top-3 left-3 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-[10px] font-bold text-[#4A3728] uppercase tracking-wider">

@@ -18,6 +18,10 @@ export function AboutPage() {
         <img
           src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=2070&auto=format&fit=crop"
           alt="Dubai skyline"
+          width="1600"
+          height="900"
+          loading="eager"
+          decoding="async"
           className="absolute inset-0 h-full w-full object-cover opacity-30"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-[#0A0705]/80 via-[#2A1F17]/80 to-[#2A1F17]" />
