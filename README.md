@@ -49,6 +49,8 @@ The production output is generated in `dist/`.
 
 ## Deployment
 
+Detailed free hosting instructions are in `docs/free-hosting-guide.md`.
+
 For Vercel or Netlify:
 
 - Framework: Vite

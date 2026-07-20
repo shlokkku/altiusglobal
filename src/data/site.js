@@ -3,9 +3,13 @@ export const brand = {
   suffix: 'Global',
   legalName: 'Altius Global Trading LLC',
   tagline: 'Beyond Borders. Beyond Limits.',
-  email: 'trade@altiusglobal.com',
-  phone: '+971 (0) 4 XXX XXXX',
-  address: ['Altius Global Trading LLC', 'Business Bay, Dubai, UAE'],
+  domain: 'altius-global.com',
+  email: 'info@altius-global.com',
+  phone: '+971 50 859 9456',
+  whatsappNumber: '971508599456',
+  whatsappMessage:
+    'Hello Altius Global, I would like to discuss a sourcing/export requirement. Please share details about your products, pricing, and logistics support.',
+  address: ['Altius Global Trading LLC', 'RAKEZ Business Zone', 'Al Nakheel Area, UAE'],
 };
 
 export const navLinks = [

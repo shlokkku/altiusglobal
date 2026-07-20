@@ -27,7 +27,7 @@ export function AboutPage() {
             Strategic international trade built on integrity, compliance, and operational excellence.
           </h1>
           <p className="font-sans text-white/75 text-lg md:text-xl max-w-3xl mt-8 leading-relaxed">
-            From our Dubai base, Altius Global connects trusted Indian manufacturers and suppliers with enterprise buyers across global markets.
+            From our UAE office, Altius Global connects trusted Indian manufacturers and suppliers with enterprise buyers across global markets.
           </p>
         </div>
       </section>

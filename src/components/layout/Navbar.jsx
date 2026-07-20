@@ -18,10 +18,10 @@ export function Navbar() {
   return (
     <header
       className={`fixed top-0 w-full z-50 transition-all duration-500 ${
-        scrolled ? 'bg-[#E8DCC8]/95 backdrop-blur-md py-4 shadow-sm border-b border-[#4A3728]/10' : 'bg-transparent py-6'
+        scrolled ? 'bg-[#E8DCC8]/95 backdrop-blur-md py-2 md:py-3 shadow-sm border-b border-[#4A3728]/10' : 'bg-transparent py-3 md:py-5'
       }`}
     >
-      <div className="container mx-auto px-6 md:px-12 flex justify-between items-center">
+      <div className="container mx-auto px-4 sm:px-6 md:px-12 flex justify-between items-center">
         <a href="/" className="transition-transform hover:scale-[1.01]">
           <BrandLogo light={!scrolled} compact />
         </a>

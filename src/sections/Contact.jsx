@@ -2,23 +2,25 @@ import { Building2, Mail, Phone } from 'lucide-react';
 import { brand } from '../data/site';
 
 export function Contact() {
+  const whatsappUrl = `https://wa.me/${brand.whatsappNumber}?text=${encodeURIComponent(brand.whatsappMessage)}`;
+
   return (
-    <section id="contact" className="py-24 md:py-32 bg-white">
-      <div className="container mx-auto px-6 md:px-12">
-        <div className="bg-[#E8DCC8] rounded-[2.5rem] overflow-hidden shadow-2xl shadow-[#4A3728]/10 grid lg:grid-cols-5">
-          <div className="lg:col-span-2 bg-[#2A1F17] p-12 text-white flex flex-col justify-between">
+    <section id="contact" className="py-16 md:py-24 lg:py-32 bg-white">
+      <div className="container mx-auto px-4 sm:px-6 md:px-12">
+        <div className="bg-[#E8DCC8] rounded-2xl md:rounded-[2.5rem] overflow-hidden shadow-2xl shadow-[#4A3728]/10 grid lg:grid-cols-5">
+          <div className="lg:col-span-2 bg-[#2A1F17] p-6 sm:p-8 md:p-12 text-white flex flex-col justify-between">
             <div>
               <span className="text-[#D4AF37] font-sans font-medium tracking-widest uppercase text-xs mb-4 block">Get In Touch</span>
-              <h3 className="font-serif text-4xl mb-8">Let's Discuss Your Trade Requirements</h3>
-              <p className="font-sans text-white/70 text-sm mb-12">
+              <h3 className="font-serif text-3xl sm:text-4xl mb-6 md:mb-8">Let's Discuss Your Trade Requirements</h3>
+              <p className="font-sans text-white/70 text-sm mb-10 md:mb-12">
                 Connect with our international trade specialists for competitive pricing, product specifications, and global logistics solutions.
               </p>
 
-              <div className="space-y-8">
+              <div className="space-y-7 md:space-y-8">
                 <div className="flex items-start gap-4">
                   <Building2 className="w-6 h-6 text-[#D4AF37] shrink-0" />
                   <div>
-                    <h5 className="font-serif text-lg mb-1">Dubai Headquarters</h5>
+                    <h5 className="font-serif text-lg mb-1">UAE Office</h5>
                     <p className="font-sans text-sm text-white/70">
                       {brand.address.map((line) => (
                         <span key={line} className="block">{line}</span>
@@ -28,35 +30,35 @@ export function Contact() {
                 </div>
                 <div className="flex items-center gap-4">
                   <Phone className="w-6 h-6 text-[#D4AF37] shrink-0" />
-                  <p className="font-sans text-sm text-white/70">{brand.phone}</p>
+                  <a href={`tel:${brand.phone.replace(/\s/g, '')}`} className="font-sans text-sm text-white/70 hover:text-[#D4AF37] transition-colors">{brand.phone}</a>
                 </div>
                 <div className="flex items-center gap-4">
                   <Mail className="w-6 h-6 text-[#D4AF37] shrink-0" />
-                  <p className="font-sans text-sm text-white/70">{brand.email}</p>
+                  <a href={`mailto:${brand.email}`} className="font-sans text-sm text-white/70 hover:text-[#D4AF37] transition-colors">{brand.email}</a>
                 </div>
               </div>
             </div>
 
-            <div className="mt-16 pt-8 border-t border-white/10">
-              <button type="button" className="w-full py-4 rounded-xl border border-[#D4AF37] text-[#D4AF37] hover:bg-[#D4AF37] hover:text-[#2A1F17] transition-colors font-sans font-medium tracking-wide">
+            <div className="mt-12 md:mt-16 pt-8 border-t border-white/10">
+              <a href={whatsappUrl} target="_blank" rel="noreferrer" className="flex w-full justify-center py-4 rounded-xl border border-[#D4AF37] text-[#D4AF37] hover:bg-[#D4AF37] hover:text-[#2A1F17] transition-colors font-sans font-medium tracking-wide">
                 Chat on WhatsApp
-              </button>
+              </a>
             </div>
           </div>
 
-          <div className="lg:col-span-3 p-12 lg:p-16">
-            <form className="space-y-6">
+          <div className="lg:col-span-3 p-6 sm:p-8 md:p-12 lg:p-16">
+            <form className="space-y-6" action={`mailto:${brand.email}`} method="post" encType="text/plain">
               <div className="grid md:grid-cols-2 gap-6">
-                <Field label="Full Name" />
-                <Field label="Company Name" />
+                <Field label="Full Name" name="Full Name" />
+                <Field label="Company Name" name="Company Name" />
               </div>
               <div className="grid md:grid-cols-2 gap-6">
-                <Field label="Email Address" type="email" />
-                <Field label="Country" />
+                <Field label="Email Address" name="Email Address" type="email" />
+                <Field label="Country" name="Country" />
               </div>
               <div className="space-y-2">
                 <label className="font-sans text-xs font-semibold text-[#4A3728] uppercase tracking-wider">Product Interest / Message</label>
-                <textarea rows="4" className="w-full bg-white border border-[#4A3728]/20 rounded-xl px-4 py-3 focus:outline-none focus:border-[#B8860B] focus:ring-1 focus:ring-[#B8860B] transition-all font-sans text-[#4A3728] resize-none" />
+                <textarea name="Product Interest / Message" rows="4" className="w-full bg-white border border-[#4A3728]/20 rounded-xl px-4 py-3 focus:outline-none focus:border-[#B8860B] focus:ring-1 focus:ring-[#B8860B] transition-all font-sans text-[#4A3728] resize-none" />
               </div>
               <button type="submit" className="bg-gradient-to-r from-[#B8860B] to-[#D4AF37] text-white px-8 py-4 rounded-xl font-sans font-medium tracking-wide transition-all duration-300 shadow-md hover:shadow-xl hover:-translate-y-1 w-full md:w-auto">
                 Submit Enquiry
@@ -69,11 +71,11 @@ export function Contact() {
   );
 }
 
-function Field({ label, type = 'text' }) {
+function Field({ label, name, type = 'text' }) {
   return (
     <div className="space-y-2">
       <label className="font-sans text-xs font-semibold text-[#4A3728] uppercase tracking-wider">{label}</label>
-      <input type={type} className="w-full bg-white border border-[#4A3728]/20 rounded-xl px-4 py-3 focus:outline-none focus:border-[#B8860B] focus:ring-1 focus:ring-[#B8860B] transition-all font-sans text-[#4A3728]" />
+      <input name={name} type={type} className="w-full bg-white border border-[#4A3728]/20 rounded-xl px-4 py-3 focus:outline-none focus:border-[#B8860B] focus:ring-1 focus:ring-[#B8860B] transition-all font-sans text-[#4A3728]" />
     </div>
   );
 }
