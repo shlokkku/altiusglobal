@@ -12,7 +12,7 @@ export function Divisions() {
           <FadeIn delay={0.1}>
             <a href="/products" className="group relative h-[460px] rounded-3xl overflow-hidden cursor-pointer shadow-lg shadow-[#4A3728]/5 border border-[#4A3728]/10 block">
               <img
-                src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?q=80&w=2070&auto=format&fit=crop"
+                src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?q=55&w=1200&auto=format&fit=crop"
                 alt="Food Commodities"
                 width="1200"
                 height="690"

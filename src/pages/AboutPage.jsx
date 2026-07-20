@@ -16,7 +16,7 @@ export function AboutPage() {
     <>
       <section className="relative pt-40 pb-24 md:pt-48 md:pb-32 bg-[#2A1F17] text-white overflow-hidden">
         <img
-          src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=2070&auto=format&fit=crop"
+          src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=55&w=1400&auto=format&fit=crop"
           alt="Dubai skyline"
           width="1600"
           height="900"

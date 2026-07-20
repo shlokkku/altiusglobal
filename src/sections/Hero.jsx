@@ -21,9 +21,7 @@ export function Hero() {
           preload="metadata"
           aria-hidden="true"
           tabIndex="-1"
-        >
-          <track kind="captions" src="/assets/empty-captions.vtt" srcLang="en" label="Decorative background video" default />
-        </video>
+        />
       </motion.div>
 
       <div className="absolute inset-0 z-[1] bg-gradient-to-b from-[#0A0705]/85 via-[#0A0705]/55 to-[#E8DCC8] pointer-events-none" />
@@ -42,14 +40,9 @@ export function Hero() {
           <span className="text-sm font-sans font-medium text-white/90 tracking-[0.2em] uppercase">{brand.tagline}</span>
         </motion.div>
 
-        <motion.h1
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.2 }}
-          className="text-5xl md:text-7xl lg:text-8xl font-serif text-white leading-[1.1] max-w-5xl mb-8 drop-shadow-2xl"
-        >
+        <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif text-white leading-[1.1] max-w-5xl mb-8 drop-shadow-2xl">
           Connecting Global Markets Through <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#B8860B] via-[#F4D068] to-[#D4AF37]">Trusted Trade</span>
-        </motion.h1>
+        </h1>
 
         <motion.p
           initial={{ opacity: 0, y: 30 }}

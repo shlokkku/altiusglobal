@@ -31,7 +31,7 @@ export function About() {
 
           <FadeIn delay={0.2} className="relative h-[600px] rounded-3xl overflow-hidden shadow-2xl shadow-[#4A3728]/10">
             <img
-              src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=2070&auto=format&fit=crop"
+              src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=55&w=1200&auto=format&fit=crop"
               alt="Dubai Global Headquarters"
               width="1200"
               height="900"
