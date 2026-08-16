@@ -4,7 +4,7 @@ const leaders = [
   {
     name: 'Shravanth H K',
     role: 'Co-Founder',
-    age: '26',
+    age: '',
     image: '/assets/shravanth.jpeg',
     imagePosition: '66% center',
     paragraphs: [
@@ -16,7 +16,7 @@ const leaders = [
   {
     name: 'Umang Chhabda',
     role: 'Co-Founder',
-    age: '23',
+    age: '',
     image: '/assets/umang.png',
     imagePosition: '47% 52%',
     paragraphs: [
@@ -28,7 +28,7 @@ const leaders = [
   {
     name: 'Sai Venkat',
     role: 'Co-Founder',
-    age: '22',
+    age: '',
     image: '/assets/sai new.png',
     imagePosition: 'center center',
     paragraphs: [
