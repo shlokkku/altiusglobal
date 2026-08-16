@@ -9,11 +9,27 @@ export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 50);
-    window.addEventListener('scroll', handleScroll);
+    let ticking = false;
+    const handleScroll = () => {
+      if (ticking) return;
+      ticking = true;
+      window.requestAnimationFrame(() => {
+        setScrolled((current) => {
+          const next = window.scrollY > 50;
+          return current === next ? current : next;
+        });
+        ticking = false;
+      });
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
     handleScroll();
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  useEffect(() => {
+    document.body.classList.toggle('menu-open', mobileMenuOpen);
+    return () => document.body.classList.remove('menu-open');
+  }, [mobileMenuOpen]);
 
   return (
     <header
@@ -65,7 +81,7 @@ export function Navbar() {
             exit={{ opacity: 0, height: 0 }}
             className="lg:hidden bg-[#E8DCC8] border-b border-[#4A3728]/10 overflow-hidden"
           >
-            <div className="flex flex-col px-6 py-4 gap-4">
+            <div className="flex flex-col px-6 py-4 gap-4 max-h-[calc(100vh-86px)] overflow-y-auto no-scrollbar">
               {navLinks.map((link) => (
                 <a
                   key={link.href}

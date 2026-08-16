@@ -31,10 +31,10 @@ export function About() {
 
           <FadeIn delay={0.2} className="relative h-[600px] rounded-3xl overflow-hidden shadow-2xl shadow-[#4A3728]/10">
             <img
-              src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=55&w=1200&auto=format&fit=crop"
+              src="/assets/WhatsApp%20Image%202026-08-16%20at%206.10.49%20PM.jpeg"
               alt="Dubai Global Headquarters"
               width="1200"
-              height="900"
+              height="1200"
               loading="lazy"
               decoding="async"
               className="w-full h-full object-cover"

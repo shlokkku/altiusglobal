@@ -14,7 +14,8 @@ export const brand = {
 
 export const navLinks = [
   { label: 'Home', href: '/' },
-  { label: 'About', href: '/about' },
+  { label: 'About Us', href: '/about' },
+  { label: 'Founders & Management', href: '/founders-management' },
   { label: 'Products', href: '/products' },
   { label: 'Industries', href: '/#industries' },
   { label: 'Global Network', href: '/#global-network' },
