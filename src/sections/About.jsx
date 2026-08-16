@@ -29,15 +29,15 @@ export function About() {
             </div>
           </FadeIn>
 
-          <FadeIn delay={0.2} className="relative h-[600px] rounded-3xl overflow-hidden shadow-2xl shadow-[#4A3728]/10">
+          <FadeIn delay={0.2} className="relative h-[650px] rounded-3xl overflow-hidden shadow-2xl shadow-[#4A3728]/10">
             <img
-              src="/assets/WhatsApp%20Image%202026-08-16%20at%206.10.49%20PM.jpeg"
+              src="/assets/image.png"
               alt="Dubai Global Headquarters"
-              width="1200"
+              width="1000"
               height="1200"
               loading="lazy"
               decoding="async"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover object-[center_60%]"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#2A1F17] via-transparent to-transparent opacity-80" />
             <div className="absolute bottom-10 left-10 right-10">
